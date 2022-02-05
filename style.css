@@ -1,0 +1,34 @@
+body{
+    background-image: linear-gradient(to left, red,blue);
+}
+section{
+    text-align: center;
+    margin: 50px 30vw auto 30vw;
+    padding: 30px;
+    border: 4px solid black;
+    background-color: teal;
+}
+#plus_minus{
+    padding-top: 5px;
+    padding-bottom: 25px;
+}
+h2{
+    font-size: 35px;
+}
+h1{
+    font-size: 70px;
+}
+button{
+    margin: 10px;
+    padding: 10px;
+    background-color: darksalmon;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.time{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
