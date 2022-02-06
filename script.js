@@ -3,6 +3,11 @@ let counter_id;
 let counter_value = 0;
 let counter_running = true;
 let add=document.getElementById("plus");
+let counter_min=0;
+let counter_id;
+let counter_value = 0;
+let counter_running = true;
+let add=document.getElementById("plus");
 let sub=document.getElementById("minus");
 document.getElementById('pause_btn').disabled = true;
 document.getElementById('resume_btn').disabled = true;
@@ -31,19 +36,34 @@ function timer(){
     console.log("timer");
     if(counter_min == 0 && counter_value == 0){
         clearInterval(counter_id);
-   
+        if (counter_min<10)
+        document.getElementById("minute").innerText="0"+counter_min;
+        else
+        document.getElementById('minute').innerText = counter_min;
+        if (counter_value<10)
+        document.getElementById("seconds").innerText="0"+counter_value--;
+        else
+        document.getElementById('seconds').innerText = counter_value;
     }
-    else if(counter_value == 0){
-        counter_min--; 
+    else if(counter_value == 0){ 
         counter_value = 59;
-        document.getElementById("minute").innerText=counter_min;
+        if (counter_min<10)
+        document.getElementById("minute").innerText="0"+ --counter_min;
+        else
+        document.getElementById("minute").innerText= --counter_min;
         document.getElementById("seconds").innerText=counter_value;
-
+       
 
     }
     else{
-        document.getElementById("minute").innerText=counter_min;
-        document.getElementById("seconds").innerText=counter_value--;
+        if (counter_min<10)
+        document.getElementById("minute").innerText="0"+counter_min;
+        else
+        document.getElementById('minute').innerText = counter_min;
+        if (counter_value<10)
+        document.getElementById("seconds").innerText="0"+counter_value--;
+        else
+        document.getElementById('seconds').innerText = counter_value--;
 
     }
 
